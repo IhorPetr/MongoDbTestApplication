@@ -19,8 +19,8 @@ build:
           dotnet publish 
 deploy:
   steps:
-    - heroku-deploy:
-        key: $HEROKU_KEY
-        key-name: DEPLOY_KEY
-        user: $HEROKU_USER
-        app-name: $HEROKU_APP_NAME
+    - internal/docker-push:
+        username: $HEROKU_USER        
+        password: $HEROKU_KEY 
+        repository: registry.heroku.com/testnetcore21/web
+        registry: https://registry.heroku.com
