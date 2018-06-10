@@ -10,7 +10,7 @@ branches:
   only:
     - master
 before_script:
-  - dotnet restore --source ./DAF
+  - dotnet restore
   - dotnet build
 script: 
   - dotnet publish
