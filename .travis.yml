@@ -16,5 +16,4 @@ before_script:
 script: 
   - dotnet publish
 after_success:
-  - docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:latest .
   - sh ./deploy_heroku.sh
