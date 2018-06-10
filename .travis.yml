@@ -16,4 +16,4 @@ before_script:
 script: 
   - dotnet publish
 after_success:
-  - sh .travis/deploy_heroku.sh
+  - sh ./deploy_heroku.sh
