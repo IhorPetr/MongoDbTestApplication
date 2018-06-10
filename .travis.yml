@@ -1,0 +1,18 @@
+language: csharp  
+sudo: required  
+dist: trusty  
+mono: none
+dotnet: 2.0.0
+dist: trusty  
+services:
+  - docker
+branches:  
+  only:
+    - master
+before_script:
+  - dotnet restore --source ./DAF
+  - dotnet build
+script: 
+  - dotnet publish
+after_success:
+  - sh deploy_heroku.sh

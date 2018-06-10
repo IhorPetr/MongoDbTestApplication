@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  daf.web:
+    image: ${DOCKER_REGISTRY}dafweb
+    build:
+      context: .
+      dockerfile: DAF/Dockerfile
